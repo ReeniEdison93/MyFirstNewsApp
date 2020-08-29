@@ -24,6 +24,7 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Builder(
         builder: (context) {
           return Material(
@@ -92,8 +93,8 @@ class _NewsPageState extends State<NewsPage> {
             child: ListTile(
               leading: ClipRect(
                 child: Hero(
-                  tag: articles[pos].urlToImage,
-                  child: articles[pos].urlToImage != null? Image.network(articles[pos].urlToImage,
+                  tag: articles[pos].title,
+                  child: articles[pos].urlToImage != null ? Image.network(articles[pos].urlToImage,
                   fit: BoxFit.cover,
                   height: 70,
                   width: 70,): Container(),
